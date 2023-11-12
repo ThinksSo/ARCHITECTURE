@@ -11,6 +11,23 @@ public class Scene {
     public List<Camera> cameras;
 
 
+    public Scene(List<PoligonalModel> models, List<Flash> flashes, List<Camera> cameras) throws Exception {
+        if (models.size() > 0) {
+            Models = models;
+        } else {
+            throw new Exception("Need one of model");
+        }
+        
+        Flashes = flashes;
+
+        
+        if (cameras.size() > 0) {
+            this.cameras = cameras;
+        } else {
+            throw new Exception("Need one of camera");
+        }
+    }
+
     public Type method1(Type type) {
     return null;
     }
