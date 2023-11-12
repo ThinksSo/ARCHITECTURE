@@ -11,7 +11,9 @@ public class Scene {
     public List<Camera> cameras;
 
 
-    public Scene(List<PoligonalModel> models, List<Flash> flashes, List<Camera> cameras) throws Exception {
+    public Scene(int id, List<PoligonalModel> models, List<Flash> flashes, List<Camera> cameras) throws Exception {
+        this.id = id;
+        
         if (models.size() > 0) {
             Models = models;
         } else {
